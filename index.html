@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Agent Resource Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* Card */
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a237e;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title .icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Search section */
+    .search-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .search-card .card-title {
+      padding: 18px 18px 0;
+    }
+
+    .search-iframe-wrapper {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 12px;
+    }
+
+    .search-iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Buttons */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: #d32f2f;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: #1a237e;
+      border: 1.5px solid #1a237e;
+    }
+
+    .btn-outline:hover {
+      background: #f5f6ff;
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px 16px 28px;
+      color: #9e9e9e;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: #757575;
+    }
+
+    /* Loading state */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      color: #9e9e9e;
+      font-size: 14px;
+    }
+
+    /* Responsive iframe height for smaller screens */
+    @media (max-height: 700px) {
+      .search-iframe-wrapper {
+        height: 380px;
+      }
+    }
+
+    @media (max-height: 600px) {
+      .search-iframe-wrapper {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://github.com/ussafetyoncall/agent_resource_hub/blob/main/b4eea925-6890-4eee-baca-2609807f1f30.png?raw=true" alt="Agent Resource Hub">
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+
+    <!-- Search Documentation -->
+    <div class="card search-card">
+      <div class="card-title">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#1a237e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        Search Documentation
+      </div>
+      <div class="search-iframe-wrapper">
+        <iframe 
+          src="https://bytedance.usttp.larkoffice.com/share/base/query/shrutwgB6yKEV37gr7dfatEDAFb"
+          title="Documentation Search"
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Chat with Agent Button -->
+    <a href="https://applink.feishu.cn/client/bot/open?appId=cli_aaba0414f1b91bd7" class="btn btn-primary">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      Chat with Oncall Agent
+    </a>
+
+    <!-- SOP Documentation Link -->
+    <a href="https://bytedance.us.larkoffice.com/docx/E8WOdvulbo0RxzxomcBufafhsHb" class="btn btn-outline" id="sop-link">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="16" y1="13" x2="8" y2="13"></line>
+        <line x1="16" y1="17" x2="8" y2="17"></line>
+        <polyline points="10 9 9 9 8 9"></polyline>
+      </svg>
+      View SOP Documentation
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <strong>Policy Enforcement Team</strong><br>
+    TikTok USDS Trust &amp; Safety — Policy Implementation
+  </div>
+
+</body>
+</html>
